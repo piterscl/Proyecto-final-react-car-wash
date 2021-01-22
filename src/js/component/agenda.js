@@ -84,9 +84,7 @@ export const Agenda = () => (
                       <div className="card-body">
                         <p className="card-text">
                           <Link to="/Servicios">
-                            <a id="hyper">
-                              Lavado a Domicilio.
-                            </a>
+                            <a id="hyper">Lavado a Domicilio.</a>
                           </Link>
                         </p>
                       </div>
