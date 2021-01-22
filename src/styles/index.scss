@@ -169,10 +169,16 @@ background-color:#ea4c89
   font-weight:600
 }
 }
-.modal-registro{
+.row .modal-registro{
   background-color:black;
   max-width: 1200px;
-  margin:0px auto;
+  margin: 0px auto;
+}
+
+.container{
+    background-image: url("../img/bg-registro.jpg");
+    background-size: contain;
+    background-repeat: round;
 }
 
 .contenedor-principal {
