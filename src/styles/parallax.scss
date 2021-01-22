@@ -1,0 +1,29 @@
+/* BACKGROUND COLOR TO BLACK */
+
+#upper-paralax {
+    background-color: rgb(0, 0, 0);
+}
+
+/* Gradient to H2 */
+
+#pitem {
+    font-size: 40px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-text-fill-color: transparent;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* PARALLAX */
+.parallax {
+    /* The image used */
+    background-image: url("https://i.pinimg.com/originals/2c/87/0a/2c870a61870e120bfcca3ab99c9dd2bf.jpg");
+  
+    /* Set a specific height */
+    min-height: 250px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-image: center;
+    background-repeat: no-repeat;
+    
+  }
