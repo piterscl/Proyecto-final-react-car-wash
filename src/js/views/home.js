@@ -1,8 +1,24 @@
 import React from "react";
+import { Map } from "../component/map";
+import { Parallax } from "../component/parallax";
+import { Video } from "../component/video";
+import { Agenda } from "../component/agenda";
+import { Carousel } from "../component/carousel";
+import { Navbar } from "../component/navbar";
+import { Footer } from "../component/footer";
+import injectContext from "../store/appContext";
 import "../../styles/home.scss";
 
 export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Test Home</h1>
-	</div>
+  <div>
+	  <Navbar />
+	  <Carousel />
+	  < Video /> 
+	  < Parallax />
+	  < Agenda />
+	  < Map />
+	  < Footer />
+
+
+  </div>
 );
