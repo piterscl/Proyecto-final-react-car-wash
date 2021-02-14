@@ -33,10 +33,12 @@ export const Carousel = () => (
 			</div>
 		</div>
 		<a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-			Previous
+			<span className={[agenda, carousel - control - prev - icon]} aria-hidden="true" />
+			<span className={[agenda, visually - hidden]}>Previous</span>
 		</a>
 		<a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-			Next
+			<span className={[agenda, carousel - control - prev - icon]} aria-hidden="true" />
+			<span className={[agenda, visually - hidden]}>Next</span>
 		</a>
 	</div>
 );
