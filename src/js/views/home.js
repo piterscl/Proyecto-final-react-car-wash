@@ -10,13 +10,13 @@ import injectContext from "../store/appContext";
 import "../../styles/home.scss";
 
 export const Home = () => (
-  <div>
-    <Navbar />
-    <Carousel />
-    <Video />
-    <Parallax />
-    <Agenda />
-    <Map />
-    <Footer />
-  </div>
+	<div>
+		<Navbar />
+		<Carousel />
+		<Video />
+		<Parallax />
+		<Agenda />
+		<Map />
+		<Footer />
+	</div>
 );
