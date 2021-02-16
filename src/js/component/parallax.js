@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../styles/index.scss";
+import "../../styles/parallax.scss";
 
 export const Parallax = () => (
 	<div className="container-fluid">

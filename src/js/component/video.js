@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../styles/index.scss";
+import "../../styles/video.scss";
 
 export const Video = () => (
 	<div className="container-fluid">
@@ -16,11 +16,11 @@ export const Video = () => (
 				/>
 			</div>
 			<div className="col-sm-6">
-				<h2 id="pitem">
+				<spam id="pitem">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis deserunt, animi sit nam nobis,
 					doloribus laboriosam quaerat possimus repellat sint facere consectetur at dolore doloremque. Eos
 					dolor explicabo labore suscipit.
-				</h2>
+				</spam>
 			</div>
 		</div>
 	</div>

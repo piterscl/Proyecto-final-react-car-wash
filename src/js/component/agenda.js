@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../../styles/index.scss";
+import "../../styles/agenda_cards.scss";
 import domiImg from "../../img/domi.jpg";
 import starImg from "../../img/star.jpg";
 import cwImg from "../../img/car-wash.jpg";
