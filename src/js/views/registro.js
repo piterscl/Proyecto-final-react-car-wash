@@ -34,6 +34,14 @@ export const Registro = () => (
 						</div>
 						<div className="form-group">
 							<input
+								type="text"
+								className="form-control"
+								id="exampleInputContraseña"
+								placeholder="Contraseña..."
+							/>
+						</div>
+						<div className="form-group">
+							<input
 								type="email"
 								className="form-control"
 								id="exampleInputEmail1"
