@@ -6,6 +6,8 @@ import { Home } from "./views/home";
 import { Registro } from "./views/registro";
 import { Contacto } from "./views/contacto";
 import { Servicios } from "./views/servicios";
+import { Login } from "./views/login";
+import { Profile } from "./views/profile";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -34,6 +36,12 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/Servicios">
 							<Servicios />
+						</Route>
+						<Route exact path="/Login">
+							<Login />
+						</Route>
+						<Route exact path="/Profile">
+							<Profile />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
