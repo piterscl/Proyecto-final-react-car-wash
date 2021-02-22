@@ -183,7 +183,7 @@ background-color:#ea4c89
 }
 
 .contenedor-principal {
-  padding: 20px;
+  padding: 50px !important;
   background-image: url("../img/bg-registro-2.jpg");
   background-size: contain;
   background-repeat: round;
@@ -192,6 +192,7 @@ background-color:#ea4c89
 .columna-img {
   background-image: url("../img/auto-registro.jpg");
   background-size: cover;
+  background-position: center;
 }
 .titulos-interiores {
   font-family: 'Italiana', serif;
