@@ -19,19 +19,19 @@ export const Servicios = () => (
 					<div className="card">
 						<img className="card-img-top" src={servicioImg1} alt="Card image cap" />
 						<div className="card-body">
-							<h5 className="card-title titulos-interiores">Servicio estándar</h5>
+							<h5 className="card-title titulos-interiores titulos-servicios">Servicio estándar</h5>
 						</div>
 					</div>
 					<div className="card">
 						<img className="card-img-top" src={servicioImg2} alt="Card image cap" />
 						<div className="card-body">
-							<h5 className="card-title titulos-interiores">Servicio Pro</h5>
+							<h5 className="card-title titulos-interiores titulos-servicios">Servicio Pro</h5>
 						</div>
 					</div>
 					<div className="card">
 						<img className="card-img-top" src={servicioImg3} alt="Card image cap" />
 						<div className="card-body">
-							<h5 className="card-title titulos-interiores">Servicio Premium</h5>
+							<h5 className="card-title titulos-interiores titulos-servicios">Servicio Premium</h5>
 						</div>
 					</div>
 				</div>
