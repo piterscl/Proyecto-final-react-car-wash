@@ -105,7 +105,7 @@ export const Servicios = () => (
 					</div>
 				</div>
 				<button type="submit" className="btn btn-gold">
-					Pagar
+					Agendar
 				</button>
 			</div>
 		</div>
