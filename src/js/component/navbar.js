@@ -19,11 +19,10 @@ export const Navbar = () => {
 								<a className="nav-link">Inicio</a>
 							</Link>
 						</li>
-						<li className="nav-item active">
-							<Link to="/Registro">
-								<a className="nav-link">
-									Registro
-									<span className="sr-only">(current)</span>
+						<li className="nav-item4">
+							<Link to="/Servicios">
+								<a className="nav-link" aria-current="page">
+									Servicios <i className="fas fa-shopping-cart" />
 								</a>
 							</Link>
 						</li>
@@ -32,13 +31,26 @@ export const Navbar = () => {
 								<a className="nav-link">Contacto y Soporte</a>
 							</Link>
 						</li>
-						<li className="nav-item4">
-							<Link to="/Servicios">
-								<a className="nav-link" aria-current="page">
-									<i className="fas fa-shopping-cart" />
+						<li className="nav-item active">
+							<Link to="/Registro">
+								<a className="nav-link">
+									Registro
+									<span className="sr-only">(current)</span>
 								</a>
 							</Link>
 						</li>
+						<li className="nav-item active">
+							<Link to="/Login">
+								<a className="nav-link">
+									Log in <span className="sr-only">(current)</span>
+								</a>
+							</Link>
+						</li>
+						<Link to="/Profile">
+							<a className="nav-link" aria-current="page">
+								<i className="far fa-user-circle" />
+							</a>
+						</Link>
 					</ul>
 				</div>
 			</div>
