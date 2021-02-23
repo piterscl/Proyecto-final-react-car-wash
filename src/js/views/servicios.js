@@ -5,6 +5,7 @@ import servicioImg3 from "../../img/premium.jpg";
 import "../../styles/index.scss";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Link } from "react-router-dom";
 import format from "date-fns/format";
 
 export const Servicios = () => (
@@ -37,53 +38,49 @@ export const Servicios = () => (
 				</div>
 				<hr />
 				<h2 className="titulos-interiores">Selecciona servicios adicionales</h2>
-				<p className="parrafo-intro">
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-				</p>
+				<p className="parrafo-intro">Selecciona los servicios adicionales que deseas agregar</p>
 				<div className="form-check">
 					<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 					<label className="form-check-label" htmlFor="defaultCheck1">
-						Servicio extra 1
+						Detergente Premium
 					</label>
-					<span className="precio-extra">$ 00</span>
+					<span className="precio-extra">$5000</span>
 				</div>
 				<hr />
 				<div className="form-check">
 					<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 					<label className="form-check-label" htmlFor="defaultCheck1">
-						Servicio extra 2
+						Silicona Renovador
 					</label>
-					<span className="precio-extra">$ 00</span>
+					<span className="precio-extra">$ 5000</span>
 				</div>
 				<hr />
 				<div className="form-check">
 					<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 					<label className="form-check-label" htmlFor="defaultCheck1">
-						Servicio extra 3
+						Lavado de Motor
 					</label>
-					<span className="precio-extra">$ 00</span>
+					<span className="precio-extra">$ 10000</span>
 				</div>
 				<hr />
 				<div className="form-check">
 					<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 					<label className="form-check-label" htmlFor="defaultCheck1">
-						Servicio extra 4
+						Limpiador de Llantas
 					</label>
-					<span className="precio-extra">$ 00</span>
+					<span className="precio-extra">$ 6000</span>
 				</div>
 				<hr />
 				<div className="form-check">
 					<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 					<label className="form-check-label" htmlFor="defaultCheck1">
-						Servicio extra 5
+						Cera en Aerosol
 					</label>
-					<span className="precio-extra">$ 00</span>
+					<span className="precio-extra">$ 5000</span>
 				</div>
 				<hr />
 				<h2 className="titulos-interiores">Selecciona fecha y hora</h2>
-				<p className="parrafo-intro">
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-				</p>
+				<p className="parrafo-intro">Selecciona el día y la hora que lavaremos tu vehiculo</p>
 				<div className="row agenda">
 					<div className="col-6">
 						<i className="fas fa-calendar-alt" />
@@ -104,8 +101,13 @@ export const Servicios = () => (
 						</a>
 					</div>
 				</div>
-				<button type="submit" className="btn btn-gold">
-					Agendar
+				<button id="checkout" type="submit" className="btn btn-gold">
+					<Link to="/checkout">
+						<a className="checkout">
+							Agendar
+							<span className="sr-only">(current)</span>
+						</a>
+					</Link>
 				</button>
 			</div>
 		</div>

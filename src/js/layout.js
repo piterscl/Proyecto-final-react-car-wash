@@ -12,6 +12,7 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { Checkout } from "./views/Checkout";
 
 //create your first component
 const Layout = () => {
@@ -43,6 +44,10 @@ const Layout = () => {
 						<Route exact path="/Profile">
 							<Profile />
 						</Route>
+						<Route exact path="/Checkout">
+							<Checkout />
+						</Route>
+
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
