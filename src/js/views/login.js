@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import Registroimg1 from "../../img/auto-registro.jpg";
-import Registroimg2 from "../../img/bg-registro-2.jpg";
-import Registroimg3 from "../../img/bg-registro.jpg";
 import "../../styles/index.scss";
 
 export const Login = () => (

@@ -4,8 +4,6 @@ import { Parallax } from "../component/parallax";
 import { Video } from "../component/video";
 import { Agenda } from "../component/agenda";
 import { Carousel } from "../component/carousel";
-import { Navbar } from "../component/navbar";
-import { Footer } from "../component/footer";
 import injectContext from "../store/appContext";
 import "../../styles/home.scss";
 
