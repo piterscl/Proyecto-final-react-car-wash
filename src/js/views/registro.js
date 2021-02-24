@@ -13,25 +13,26 @@ export const Registro = props => {
 	const handleChange = e => {
 		let datos = state;
 		datos[e.target.name] = e.target.value;
-		setState({ ...datos });
+		setState(datos);
 	};
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		let formData = new FormData();
+		/* let formData = new FormData();
 		formData.append("username", state.username);
 		formData.append("apellido", state.apellido);
 		formData.append("password", state.password);
 		formData.append("email", state.email);
 		formData.append("phone", state.phone);
-
-		saveUSer(formData);
+		console.log(FormData); */
+		saveUSer(state);
 	};
 
 	const saveUSer = form => {
 		fetch("http://localhost:5000/Registro", {
 			method: "POST",
-			body: form
+			body: JSON.stringify(form),
+			headers: { "content-type": "application/json" }
 		})
 			.then(resp => resp.json())
 			.then(data => console.log(data));
