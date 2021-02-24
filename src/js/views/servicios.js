@@ -6,7 +6,9 @@ import "../../styles/index.scss";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link } from "react-router-dom";
-import { Colapsible } from "../component/collapsibles/collapsible";
+import Basico from "../component/collapsibles/Basico";
+import Pro from "../component/collapsibles/Pro";
+import Premium from "../component/collapsibles/Premium";
 import format from "date-fns/format";
 
 export const Servicios = () => (
@@ -22,20 +24,24 @@ export const Servicios = () => (
 						<img className="card-img-top" src={servicioImg1} alt="Card image cap" />
 						<div className="card-body">
 							<h5 className="card-title titulos-interiores titulos-servicios">
-								<Colapsible />
+								<Basico />
 							</h5>
 						</div>
 					</div>
 					<div className="card">
 						<img className="card-img-top" src={servicioImg2} alt="Card image cap" />
 						<div className="card-body">
-							<h5 className="card-title titulos-interiores titulos-servicios">Servicio Pro</h5>
+							<h5 className="card-title titulos-interiores titulos-servicios">
+								<Pro />
+							</h5>
 						</div>
 					</div>
 					<div className="card">
 						<img className="card-img-top" src={servicioImg3} alt="Card image cap" />
 						<div className="card-body">
-							<h5 className="card-title titulos-interiores titulos-servicios">Servicio Premium</h5>
+							<h5 className="card-title titulos-interiores titulos-servicios">
+								<Premium />
+							</h5>
 						</div>
 					</div>
 				</div>
