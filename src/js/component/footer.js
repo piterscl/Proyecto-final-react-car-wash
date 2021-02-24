@@ -42,7 +42,7 @@ export const Footer = () => (
 				<div className="col-md-8 col-sm-6 col-xs-12">
 					<p className="copyright-text">
 						Copyright &copy; 2021 Todos los derechos reservados por
-						<a href="#">Black Star Car Wash</a>.
+						<a href="#"> Black Star Car Wash</a>.
 					</p>
 				</div>
 
