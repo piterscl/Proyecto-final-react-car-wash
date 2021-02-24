@@ -5,14 +5,9 @@ import servicioImg3 from "../../img/premium.jpg";
 import "../../styles/index.scss";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
 import Basico from "../component/collapsibles/Basico";
 import Pro from "../component/collapsibles/Pro";
 import Premium from "../component/collapsibles/Premium";
-=======
-import { Colapsible } from "../component/collapsibles/collapsible";
-import { Dates } from "../component/datepicker/datepicker";
->>>>>>> 9a0bacc85b0b30ad48ae6cb4cb04d62202558a37
 import format from "date-fns/format";
 
 export const Servicios = () => (
