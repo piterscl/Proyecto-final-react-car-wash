@@ -13,8 +13,3 @@ export const Checkout = () => (
 		</div>
 	</div>
 );
-
-function myFunction() {
-	let popup = document.getElementById("myPopup");
-	popup.classList.toggle("show");
-}
