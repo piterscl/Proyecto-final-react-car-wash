@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import Basico from "../component/collapsibles/Basico";
 import Pro from "../component/collapsibles/Pro";
 import Premium from "../component/collapsibles/Premium";
+import Dates from "../component/datepicker/datepicker";
 import format from "date-fns/format";
 
 export const Servicios = () => (
@@ -92,7 +93,7 @@ export const Servicios = () => (
 				<div className="row agenda">
 					<div className="col-6">
 						<i className="fas fa-calendar-alt" />
-						<Dates />
+						<Dates onChange={date => setStartDate(date)} />
 					</div>
 					<div className="col-6">
 						<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">

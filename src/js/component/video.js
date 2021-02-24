@@ -7,8 +7,6 @@ export const Video = () => (
 			<div className="col-sm-6">
 				<iframe
 					className="yt"
-					width="900"
-					height="480"
 					src="https://www.youtube.com/embed/HF9JfW-ayfA?autoplay=1"
 					frameBorder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
