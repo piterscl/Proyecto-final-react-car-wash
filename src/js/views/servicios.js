@@ -3,10 +3,10 @@ import servicioImg1 from "../../img/estandar.jpg";
 import servicioImg2 from "../../img/pro.jpg";
 import servicioImg3 from "../../img/premium.jpg";
 import "../../styles/index.scss";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link } from "react-router-dom";
 import { Colapsible } from "../component/collapsibles/collapsible";
+import { Dates } from "../component/datepicker/datepicker";
 import format from "date-fns/format";
 
 export const Servicios = () => (
@@ -87,7 +87,7 @@ export const Servicios = () => (
 				<div className="row agenda">
 					<div className="col-6">
 						<i className="fas fa-calendar-alt" />
-						<DatePicker />
+						<Dates />
 					</div>
 					<div className="col-6">
 						<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
