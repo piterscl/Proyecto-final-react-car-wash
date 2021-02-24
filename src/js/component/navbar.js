@@ -9,7 +9,7 @@ export const Navbar = () => {
 			<div className="container">
 				<Link to="/">
 					<a className="navbar-brand" href="#">
-						<img src={logoImg} width="117" height="36" alt="" />
+						<img src={logoImg} width="140vw" height="60vh" alt="" />
 					</a>
 				</Link>
 				<div className="collapse navbar-collapse" id="navbarNav">

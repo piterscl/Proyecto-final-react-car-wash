@@ -10,7 +10,7 @@ export const Agenda = () => (
 		<div className="container">
 			<div className="row">
 				<div className="col-sm-4">
-					<div className="card" style={{ width: "18rem" }}>
+					<div className="card" style={{ width: "15vw" }}>
 						<img id="img-card" src={starImg} className="card-img-top" alt="..." />
 						<div className="card-body">
 							<p className="card-text">
@@ -22,7 +22,7 @@ export const Agenda = () => (
 					</div>
 				</div>
 				<div className="col-sm-4">
-					<div className="card" style={{ width: "18rem" }}>
+					<div className="card" style={{ width: "15vw" }}>
 						<img id="img-card" src={cwImg} className=" card-img-top" alt="..." />
 						<div className="card-body">
 							<p className=" card-text">
@@ -34,7 +34,7 @@ export const Agenda = () => (
 					</div>
 				</div>
 				<div className="col-sm-4">
-					<div className="card" style={{ width: "18rem" }}>
+					<div className="card" style={{ width: "15vw" }}>
 						<img id="img-card" src={domiImg} className="card-img-top" alt="..." />
 						<div className="card-body">
 							<p className="card-text">
