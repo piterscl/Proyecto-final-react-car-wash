@@ -18,6 +18,25 @@ import format from "date-fns/format";
 export const Servicios = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+
+	const handleChange = e => {
+		let datos = state;
+		datos[e.target.name] = e.target.value;
+		setState(datos);
+	};
+
+	const handleSubmit = e => {
+		e.preventDefault();
+		saveServices(state);
+	};
+
+	const saveServices = () => {
+		fetch("http://localhost:5000/Agendamiento", {
+			method: "POST",
+			body: JSON.stringify(),
+			headers: { "content-type": "application/json" }
+		}).then(resp => resp.json());
+	};
 	return (
 		<div className="contenedor-principal">
 			<div className="container">
@@ -57,42 +76,52 @@ export const Servicios = props => {
 					<p className="parrafo-intro">Selecciona los servicios adicionales que deseas agregar</p>
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-						<label className="form-check-label" htmlFor="defaultCheck1">
+						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
 							{store.extras[params.theid].nombre_extra}
 						</label>
-						<span className="precio-extra">{store.extras[params.theid].valor_extra}</span>
+						<span className="precio-extra" onChange={handleChange}>
+							{store.extras[params.theid].valor_extra}
+						</span>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-						<label className="form-check-label" htmlFor="defaultCheck1">
+						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
 							{store.extras[params.theid].nombre_extra}
 						</label>
-						<span className="precio-extra">{store.extras[params.theid].valor_extra}</span>
+						<span className="precio-extra" onChange={handleChange}>
+							{store.extras[params.theid].valor_extra}
+						</span>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-						<label className="form-check-label" htmlFor="defaultCheck1">
+						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
 							{store.extras[params.theid].nombre_extra}
 						</label>
-						<span className="precio-extra">{store.extras[params.theid].valor_extra}</span>
+						<span className="precio-extra" onChange={handleChange}>
+							{store.extras[params.theid].valor_extra}
+						</span>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-						<label className="form-check-label" htmlFor="defaultCheck1">
+						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
 							{store.extras[params.theid]}
 						</label>
-						<span className="precio-extra">{store.extras[params.theid].valor_extra}</span>
+						<span className="precio-extra" onChange={handleChange}>
+							{store.extras[params.theid].valor_extra}
+						</span>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-						<label className="form-check-label" htmlFor="defaultCheck1">
+						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
 							{store.extras[params.theid].nombre_extra}
 						</label>
-						<span className="precio-extra">{store.extras[params.theid].valor_extra}</span>
+						<span className="precio-extra" onChange={handleChange}>
+							{store.extras[params.theid].valor_extra}
+						</span>
 					</div>
 					<hr />
 					<h2 className="titulos-interiores">Selecciona fecha y hora</h2>
@@ -100,24 +129,24 @@ export const Servicios = props => {
 					<div className="row agenda">
 						<div className="col-6">
 							<i className="fas fa-calendar-alt" />
-							<Dates onChange={date => setStartDate(date)} />
+							<Dates onChange={(handleChange, date => setStartDate(date))} />
 						</div>
 						<div className="col-6">
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-							{store.horarios[params.theid].horas} <i className="far fa-clock" />
+								{store.horarios[params.theid].horas} <i className="far fa-clock" />
 							</a>
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-							{store.horarios[params.theid].horas} <i className="far fa-clock" />
+								{store.horarios[params.theid].horas} <i className="far fa-clock" />
 							</a>
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-							{store.horarios[params.theid].horas} <i className="far fa-clock" />
+								{store.horarios[params.theid].horas} <i className="far fa-clock" />
 							</a>
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-							{store.horarios[params.theid].horas} <i className="far fa-clock" />
+								{store.horarios[params.theid].horas} <i className="far fa-clock" />
 							</a>
 						</div>
 					</div>
-					<button id="checkout" type="submit" className="btn btn-gold">
+					<button id="checkout" type="submit" className="btn btn-gold" onSubmit={handleSubmit}>
 						<Link to="/checkout">
 							<a className="checkout">
 								Agendar
