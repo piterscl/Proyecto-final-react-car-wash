@@ -19,13 +19,6 @@ export const Registro = props => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		/* let formData = new FormData();
-		formData.append("username", state.username);
-		formData.append("apellido", state.apellido);
-		formData.append("password", state.password);
-		formData.append("email", state.email);
-		formData.append("phone", state.phone);
-		console.log(FormData); */
 		saveUSer(state);
 	};
 
