@@ -1,15 +1,28 @@
 import React, { useState } from "react";
 import "../../styles/checkout.scss";
+import { Context } from "../store/appContext";
+import { useContext } from "react";
+import { useParams } from "react-router-dom";
+import PropTypes from "prop-types";
 
-export const Checkout = () => (
-	<div className="contenedor-principal">
-		<div className="container" />
-		<div className="row">
-			<div className="col-sm-12">
-				<button id="btn" className="btn btn-dark">
-					Terminado
-				</button>
+export const Checkout = props => {
+	const { store, actions } = useContext(Context);
+	const params = useParams();
+	return (
+		<div className="contenedor-principal">
+			<div className="container" />
+			<div className="row">
+				<div className="col-sm-12">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<button id="btn" className="btn btn-dark">
+						Terminado
+					</button>
+				</div>
 			</div>
 		</div>
-	</div>
-);
+	);
+};

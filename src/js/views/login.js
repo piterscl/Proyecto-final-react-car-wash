@@ -9,7 +9,13 @@ async function loginUser(credentials) {
 			"Content-Type": "application/json"
 		},
 		body: JSON.stringify(credentials)
-	}).then(data => data.json());
+	})
+		.then(response => {
+			console.log(response);
+		})
+		.catch(err => {
+			console.error(err);
+		});
 }
 
 export function Login({ setToken }) {

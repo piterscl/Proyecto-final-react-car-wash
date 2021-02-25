@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../styles/registro.scss";
+import PropTypes from "prop-types";
 
 export const Registro = props => {
 	const [state, setState] = useState({
@@ -33,9 +34,7 @@ export const Registro = props => {
 			method: "POST",
 			body: JSON.stringify(form),
 			headers: { "content-type": "application/json" }
-		})
-			.then(resp => resp.json())
-			.then(data => console.log(data));
+		}).then(resp => resp.json());
 	};
 
 	return (
@@ -109,4 +108,8 @@ export const Registro = props => {
 			</div>
 		</div>
 	);
+};
+
+Registro.propTypes = {
+	match: PropTypes.object
 };
