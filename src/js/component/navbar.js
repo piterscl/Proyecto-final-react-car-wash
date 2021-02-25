@@ -7,49 +7,48 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div className="container">
-				<Link to="/">
-					<a className="navbar-brand" href="#">
-						<img src={logoImg} width="140vw" height="60vh" alt="" />
-					</a>
-				</Link>
+				<p className="navbar-brand" href="#">
+					<img src={logoImg} width="140vw" height="60vh" alt="" />
+				</p>
+
 				<div className="collapse navbar-collapse" id="navbarNav">
 					<ul className="navbar-nav ml-auto">
 						<li className="nav-item">
 							<Link to="/">
-								<a className="nav-link">Inicio</a>
+								<p className="nav-link">Inicio</p>
 							</Link>
 						</li>
 						<li className="nav-item4">
 							<Link to="/Servicios">
-								<a className="nav-link" aria-current="page">
+								<p className="nav-link" aria-current="page">
 									Servicios <i className="fas fa-shopping-cart" />
-								</a>
+								</p>
 							</Link>
 						</li>
 						<li className="nav-item">
 							<Link to="/Contacto-soporte">
-								<a className="nav-link">Contacto y Soporte</a>
+								<p className="nav-link">Contacto y Soporte</p>
 							</Link>
 						</li>
 						<li className="nav-item active">
 							<Link to="/Registro">
-								<a className="nav-link">
+								<p className="nav-link">
 									Registro
 									<span className="sr-only">(current)</span>
-								</a>
+								</p>
 							</Link>
 						</li>
 						<li className="nav-item active">
 							<Link to="/Login">
-								<a className="nav-link">
+								<p className="nav-link">
 									Log in <span className="sr-only">(current)</span>
-								</a>
+								</p>
 							</Link>
 						</li>
 						<Link to="/Profile">
-							<a className="nav-link" aria-current="page">
+							<p className="nav-link" aria-current="page">
 								<i className="far fa-user-circle" />
-							</a>
+							</p>
 						</Link>
 					</ul>
 				</div>
