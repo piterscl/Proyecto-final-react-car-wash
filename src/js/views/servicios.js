@@ -58,41 +58,41 @@ export const Servicios = props => {
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 						<label className="form-check-label" htmlFor="defaultCheck1">
-							{store.extras[params.nombre_extra]}
+							{store.extras[params.theid].nombre_extra}
 						</label>
-						<span className="precio-extra">{store.extras[params.valor_extra]}</span>
+						<span className="precio-extra">{store.extras[params.theid].valor_extra}</span>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 						<label className="form-check-label" htmlFor="defaultCheck1">
-							{store.extras[params.nombre_extra]}
+							{store.extras[params.theid].nombre_extra}
 						</label>
-						<span className="precio-extra">{store.extras[params.valor_extra]}</span>
+						<span className="precio-extra">{store.extras[params.theid].valor_extra}</span>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 						<label className="form-check-label" htmlFor="defaultCheck1">
-							{store.extras[params.nombre_extra]}
+							{store.extras[params.theid].nombre_extra}
 						</label>
-						<span className="precio-extra">{store.extras[params.valor_extra]}</span>
+						<span className="precio-extra">{store.extras[params.theid].valor_extra}</span>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 						<label className="form-check-label" htmlFor="defaultCheck1">
-							{store.extras[params.nombre_extra]}
+							{store.extras[params.theid]}
 						</label>
-						<span className="precio-extra">{store.extras[params.valor_extra]}</span>
+						<span className="precio-extra">{store.extras[params.theid].valor_extra}</span>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 						<label className="form-check-label" htmlFor="defaultCheck1">
-							{store.extras[params.nombre_extra]}
+							{store.extras[params.theid].nombre_extra}
 						</label>
-						<span className="precio-extra">{store.extras[params.valor_extra]}</span>
+						<span className="precio-extra">{store.extras[params.theid].valor_extra}</span>
 					</div>
 					<hr />
 					<h2 className="titulos-interiores">Selecciona fecha y hora</h2>
@@ -104,16 +104,16 @@ export const Servicios = props => {
 						</div>
 						<div className="col-6">
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-								10:00 <i className="far fa-clock" />
+							{store.horarios[params.theid].horas} <i className="far fa-clock" />
 							</a>
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-								11:00 <i className="far fa-clock" />
+							{store.horarios[params.theid].horas} <i className="far fa-clock" />
 							</a>
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-								12:00 <i className="far fa-clock" />
+							{store.horarios[params.theid].horas} <i className="far fa-clock" />
 							</a>
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-								13:00 <i className="far fa-clock" />
+							{store.horarios[params.theid].horas} <i className="far fa-clock" />
 							</a>
 						</div>
 					</div>
