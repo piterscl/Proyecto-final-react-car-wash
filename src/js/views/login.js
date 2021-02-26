@@ -11,9 +11,19 @@ async function loginUser() {
 		body: JSON.stringify()
 	})
 		.then(response => {
-			console.log(response);
+			if (response.lenght > 0) {
+				var respuesta = response[0];
+				var objetojson = JSON.parse(body);
+
+				alert(`Bienvenido`);
+				window.location.href = "/profile";
+			} else {
+				alert(`El Usuario o la contraseña no son correctos`);
+				window.location.href = "/profile";
+			}
 		})
 		.catch(err => {
+			window.location.href = "/profile";
 			console.error(err);
 		});
 }
@@ -48,6 +58,7 @@ export function Login() {
 									id="exampleInputName1"
 									aria-describedby="namelHelp"
 									placeholder="Nombre de Usuario"
+									value={username}
 									onChange={e => setUserName(e.target.value)}
 								/>
 							</div>
@@ -57,6 +68,7 @@ export function Login() {
 									className="form-control"
 									id="exampleInputPassword"
 									placeholder="Contraseña"
+									value={password}
 									onChange={e => setPassword(e.target.value)}
 								/>
 							</div>
