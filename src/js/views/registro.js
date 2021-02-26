@@ -23,7 +23,7 @@ export const Registro = props => {
 	};
 
 	const saveUSer = form => {
-		fetch("http://localhost:5000/Registro", {
+		fetch("http://localhost:5000/API/Registro", {
 			method: "POST",
 			body: JSON.stringify(form),
 			headers: { "content-type": "application/json" }

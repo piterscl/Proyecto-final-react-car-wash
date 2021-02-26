@@ -13,11 +13,10 @@ export const Checkout = props => {
 			<div className="container" />
 			<div className="row">
 				<div className="col-sm-12">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
+					<span>{store.checkout[params.theid].horarios}</span>
+					<span>{store.checkout[params.theid].servicios}</span>
+					<span>{store.checkout[params.theid].extras}</span>
+					<span>{store.checkout[params.theid].users}</span>
 					<button id="btn" className="btn btn-dark">
 						Terminado
 					</button>
@@ -25,4 +24,8 @@ export const Checkout = props => {
 			</div>
 		</div>
 	);
+};
+
+Checkout.propTypes = {
+	match: PropTypes.object
 };

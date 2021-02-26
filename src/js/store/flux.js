@@ -9,7 +9,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			getservices: () => {
-				fetch("https://localhost:5000/Servicios")
+				fetch("https://localhost:5000/API/Servicios")
 					.then(respuesta => respuesta.json())
 					.then(data => {
 						setStore({
@@ -19,7 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log(error));
 			},
 			getprofile: () => {
-				fetch("https://localhost:5000/Profile")
+				fetch("https://localhost:5000/API/Profile")
 					.then(respuesta => respuesta.json())
 					.then(data => {
 						setStore({
@@ -29,7 +29,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log(error));
 			},
 			getcheckout: () => {
-				fetch("https://localhost:5000/Checkout")
+				fetch("http://localhost:5000/API/Profile/<int:id>/Checkout/<int:id>")
 					.then(respuesta => respuesta.json())
 					.then(data => {
 						setStore({
@@ -39,21 +39,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log(error));
 			},
 			getextras: () => {
-				fetch("https://localhost:5000/Extras")
+				fetch("https://localhost:5000/API/Extras/<int:id>")
 					.then(respuesta => respuesta.json())
 					.then(data => {
 						setStore({
-							checkout: data.results
+							extras: data.results
 						});
 					})
 					.catch(error => console.log(error));
 			},
 			gethorarios: () => {
-				fetch("https://localhost:5000/Horarios")
+				fetch("https://localhost:5000/horarios")
 					.then(respuesta => respuesta.json())
 					.then(data => {
 						setStore({
-							checkout: data.results
+							horarios: data.results
 						});
 					})
 					.catch(error => console.log(error));

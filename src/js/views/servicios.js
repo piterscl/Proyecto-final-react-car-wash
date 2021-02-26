@@ -31,7 +31,7 @@ export const Servicios = props => {
 	};
 
 	const saveServices = () => {
-		fetch("http://localhost:5000/Agendamiento", {
+		fetch("http://localhost:5000/API/Profile/<int:id>/Checkout/<int:id>", {
 			method: "POST",
 			body: JSON.stringify(),
 			headers: { "content-type": "application/json" }
