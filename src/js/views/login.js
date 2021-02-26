@@ -2,33 +2,32 @@ import React, { useState } from "react";
 import "../../styles/index.scss";
 import PropTypes from "prop-types";
 
-async function loginUser(credentials) {
+async function loginUser(username, password) {
 	return fetch("http://localhost:5000/API/Login", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json"
 		},
-		body: JSON.stringify(credentials)
+		body: JSON.stringify(username, password)
 	})
 		.then(response => {
+			console.log(response);
 			if (response.lenght > 0) {
 				var respuesta = response[0];
 				var objetojson = JSON.parse(body);
-
 				alert(`Bienvenido`);
-				window.location.href = "/profile";
+				window.location.href = "/profile/int:id";
 			} else {
 				alert(`El Usuario o la contraseña no son correctos`);
-				window.location.href = "/profile";
+				window.location.href = "/login";
 			}
 		})
 		.catch(err => {
-			window.location.href = "/profile";
 			console.error(err);
 		});
 }
 
-export function Login({ setToken }) {
+export function Login(token) {
 	const [username, setUserName] = useState();
 	const [password, setPassword] = useState();
 
@@ -38,7 +37,7 @@ export function Login({ setToken }) {
 			username,
 			password
 		});
-		/* setToken(token); */
+		/*setToken(token);*/
 	};
 
 	return (
