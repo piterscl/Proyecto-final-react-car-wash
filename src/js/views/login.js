@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "../../styles/index.scss";
 import PropTypes from "prop-types";
 
-async function loginUser(credentials) {
+async function loginUser() {
 	return fetch("http://localhost:5000/API/Login", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json"
 		},
-		body: JSON.stringify(credentials)
+		body: JSON.stringify()
 	})
 		.then(response => {
 			console.log(response);
@@ -18,7 +18,7 @@ async function loginUser(credentials) {
 		});
 }
 
-export function Login({ setToken }) {
+export function Login() {
 	const [username, setUserName] = useState();
 	const [password, setPassword] = useState();
 
@@ -28,7 +28,6 @@ export function Login({ setToken }) {
 			username,
 			password
 		});
-		setToken(token);
 	};
 
 	return (
