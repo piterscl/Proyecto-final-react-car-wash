@@ -28,7 +28,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         fetch("https://localhost:5000/API/Profile", {
           "method": "GET",
           "headers": {
-            Authorization: "Bearer <int:id>",
+            "Authorization": "Bearer <int:id>",
           },
         })
           .then((respuesta) => respuesta.json())
@@ -42,7 +42,9 @@ const getState = ({ getStore, getActions, setStore }) => {
       getcheckout: () => {
         fetch("http://localhost:5000/API/Profile/<int:id>/Checkout/<int:id>", {
           "method": "GET",
-          "headers": { "Content-Type": "application/json" },
+          "headers": { 
+			  "Content-Type": "application/json",
+		 },
 		  "body": "{}"
         })
           .then((respuesta) => respuesta.json())
