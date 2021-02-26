@@ -40,13 +40,13 @@ export const Profile = props => {
 													<div className="col-sm-6">
 														<p className="m-b-10 f-w-600">Email</p>
 														<h6 className="text-muted f-w-400">
-															{store.profile[params.theid].email}
+															{store.profile[params.email]}
 														</h6>
 													</div>
 													<div className="col-sm-6">
 														<p className="m-b-10 f-w-600">Teléfono</p>
 														<h6 className="text-muted f-w-400">
-															{store.profile[params.theid].phone}
+															{store.profile[params.phone]}
 														</h6>
 													</div>
 												</div>
