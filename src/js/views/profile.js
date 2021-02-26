@@ -29,7 +29,7 @@ export const Profile = props => {
 													/>{" "}
 												</div>
 												<h6 className="f-w-600">Perfil</h6>
-												<p>Usuario</p>{" "}
+												<p>{store.profile[params.theid].username}</p>{" "}
 												<i className=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16" />
 											</div>
 										</div>

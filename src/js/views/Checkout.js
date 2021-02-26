@@ -13,10 +13,10 @@ export const Checkout = props => {
 			<div className="container" />
 			<div className="row">
 				<div className="col-sm-12">
-					<span>{store.checkout[params.theid].horarios}</span>
-					<span>{store.checkout[params.theid].servicios}</span>
-					<span>{store.checkout[params.theid].extras}</span>
-					<span>{store.checkout[params.theid].users}</span>
+					<span>{store.checkout[params.horarios]}</span>
+					<span>{store.checkout[params.servicios]}</span>
+					<span>{store.checkout[params.extras]}</span>
+					<span>{store.checkout[params.users]}</span>
 					<button id="btn" className="btn btn-dark">
 						Terminado
 					</button>

@@ -13,11 +13,15 @@ import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 import format from "date-fns/format";
 
 export const Servicios = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	useEffect(() => {
+		actions.getextras();
+	});
 
 	const handleChange = e => {
 		let datos = state;
@@ -77,50 +81,50 @@ export const Servicios = props => {
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
-							{store.extras[params.nombre_extra]}
+							{store.extras[params.theid].nombre_extra}
 						</label>
 						<span className="precio-extra" onChange={handleChange}>
-							{store.extras[params.valor_extra]}
+							{store.extras[params.theid.valor_extra]}
 						</span>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
-							{store.extras[params.nombre_extra]}
+							{store.extras[params.id]}
 						</label>
 						<span className="precio-extra" onChange={handleChange}>
-							{store.extras[params.valor_extra]}
+							{store.extras[params.id]}
 						</span>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
-							{store.extras[params.nombre_extra]}
+							{store.extras[params.id]}
 						</label>
 						<span className="precio-extra" onChange={handleChange}>
-							{store.extras[params.valor_extra]}
+							{store.extras[params.id]}
 						</span>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
-							{store.extras[params.nombre_extra]}
+							{store.extras[params.id]}
 						</label>
 						<span className="precio-extra" onChange={handleChange}>
-							{store.extras[params.valor_extra]}
+							{store.extras[params.id]}
 						</span>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
 						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
-							{store.extras[params.nombre_extra]}
+							{store.extras[params.id]}
 						</label>
 						<span className="precio-extra" onChange={handleChange}>
-							{store.extras[params.valor_extra]}
+							{store.extras[params.id]}
 						</span>
 					</div>
 					<hr />
@@ -133,16 +137,16 @@ export const Servicios = props => {
 						</div>
 						<div className="col-6">
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-								{store.horarios[params.horas]} <i className="far fa-clock" />
+								{store.horarios[params.id]} <i className="far fa-clock" />
 							</a>
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-								{store.horarios[params.horas]} <i className="far fa-clock" />
+								{store.horarios[params.id]} <i className="far fa-clock" />
 							</a>
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-								{store.horarios[params.horas]} <i className="far fa-clock" />
+								{store.horarios[params.id]} <i className="far fa-clock" />
 							</a>
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-								{store.horarios[params.horas]} <i className="far fa-clock" />
+								{store.horarios[params.id]} <i className="far fa-clock" />
 							</a>
 						</div>
 					</div>

@@ -9,7 +9,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			getservices: () => {
-				fetch("https://localhost:5000/API/Servicios", {
+				fetch("http://localhost:5000/API/Servicios", {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json"
@@ -25,10 +25,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log(error));
 			},
 			getprofile: () => {
-				fetch("https://localhost:5000/API/Profile", {
+				fetch("http://localhost:5000/API/Profile/", {
 					method: "GET",
 					headers: {
-						Authorization: "Bearer <int:id>"
+						Authorization: "Bearer <JWT>"
 					}
 				})
 					.then(respuesta => respuesta.json())
@@ -39,8 +39,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(error => console.log(error));
 			},
+			getcheckout_profile: () => {
+				fetch("http://localhost:5000/API/Profile/", {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: "{}"
+				})
+					.then(respuesta => respuesta.json())
+					.then(data => {
+						setStore({
+							checkout: data.results
+						});
+					})
+					.catch(error => console.log(error));
+			},
 			getcheckout: () => {
-				fetch("http://localhost:5000/API/Profile/<int:id>/Checkout/<int:id>", {
+				fetch("http://localhost:5000/API/Checkout/", {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json"
@@ -56,12 +72,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log(error));
 			},
 			getextras: () => {
-				fetch("https://localhost:5000/API/Extras/<int:id>", {
+				fetch("http://localhost:5000/API/Extras/", {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json"
-					},
-					body: "{}"
+					}
 				})
 					.then(respuesta => respuesta.json())
 					.then(data => {
@@ -72,7 +87,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log(error));
 			},
 			gethorarios: () => {
-				fetch("https://localhost:5000/horarios", {
+				fetch("http://localhost:5000/horarios", {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json"
