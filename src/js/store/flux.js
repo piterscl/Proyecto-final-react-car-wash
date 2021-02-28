@@ -1,103 +1,87 @@
+import { id } from "date-fns/locale";
+import { useStore } from "react-redux";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			services: [],
-			checkout: [],
-			profile: [],
-			extras: [],
-			horarios: []
+			apiURL: "http://localhost:5000",
+			username: "",
+			password: "",
+			error: null,
+			isAuth: false,
+			currentUser: null,
+			id: "",
+			profile: null
 		},
 		actions: {
-			getservices: () => {
-				fetch("http://localhost:5000/API/Servicios", {
-					method: "GET",
-					headers: {
-						"Content-Type": "application/json"
-					},
-					body: "{}"
-				})
-					.then(respuesta => respuesta.json())
-					.then(data => {
-						setStore({
-							services: data.results
-						});
-					})
-					.catch(error => console.log(error));
+			isAuthenticated: () => {
+				console.log("verificando usuario");
+				if (sessionStorage.getItem("isAuth")) {
+					setStore({
+						isAuth: JSON.parse(sessionStorage.getItem("isAuth")),
+						currentUser: JSON.parse(sessionStorage.getItem("currentUser"))
+					});
+				}
 			},
-			getprofile: () => {
-				fetch("http://localhost:5000/API/Profile/", {
+			handleChange: e => {
+				setStore({
+					[e.target.name]: e.target.value
+				});
+			},
+			handleSubmit: async (e, history) => {
+				e.preventDefault();
+				try {
+					const { apiURL, username, password } = getStore();
+					const data = { username: username, password: password, id: id };
+					//console.log(data);
+					const resp = await fetch(`${apiURL}/API/Login`, {
+						method: "POST",
+						body: JSON.stringify(data),
+						headers: {
+							"Content-Type": "application/json"
+						}
+					});
+					const infoUser = await resp.json();
+					if (infoUser.msg) {
+						setStore({
+							password: "",
+							error: infoUser.msg
+						});
+					} else {
+						setStore({
+							username: "",
+							password: "",
+							error: null,
+							currentUser: infoUser,
+							id: "",
+							/* id: currentUser.id, */
+							isAuth: true
+						});
+						sessionStorage.setItem("isAuth", true);
+						sessionStorage.setItem("currentUser", JSON.stringify(infoUser));
+						getActions().getProfile();
+						history.push("/Profile/");
+					}
+				} catch (error) {
+					setStore({
+						error: error.message
+					});
+				}
+			},
+			getProfile: () => {
+				const { apiURL, currentUser } = getStore();
+				fetch(`${apiURL}/API/Profile`, {
 					method: "GET",
 					headers: {
-						Authorization: "Bearer <JWT>"
+						"Content-Type": "application/json",
+						Authorization: "Bearer " + currentUser?.access_token
 					}
 				})
-					.then(respuesta => respuesta.json())
+					.then(resp => resp.json())
 					.then(data => {
+						console.log(data);
 						setStore({
-							profile: data.results
-						});
-					})
-					.catch(error => console.log(error));
-			},
-			getcheckout_profile: () => {
-				fetch("http://localhost:5000/API/Profile/", {
-					method: "GET",
-					headers: {
-						"Content-Type": "application/json"
-					},
-					body: "{}"
-				})
-					.then(respuesta => respuesta.json())
-					.then(data => {
-						setStore({
-							checkout: data.results
-						});
-					})
-					.catch(error => console.log(error));
-			},
-			getcheckout: () => {
-				fetch("http://localhost:5000/API/Checkout/", {
-					method: "GET",
-					headers: {
-						"Content-Type": "application/json"
-					},
-					body: "{}"
-				})
-					.then(respuesta => respuesta.json())
-					.then(data => {
-						setStore({
-							checkout: data.results
-						});
-					})
-					.catch(error => console.log(error));
-			},
-			getextras: () => {
-				fetch("http://localhost:5000/API/Extras/", {
-					method: "GET",
-					headers: {
-						"Content-Type": "application/json"
-					}
-				})
-					.then(respuesta => respuesta.json())
-					.then(data => {
-						setStore({
-							extras: data.results
-						});
-					})
-					.catch(error => console.log(error));
-			},
-			gethorarios: () => {
-				fetch("http://localhost:5000/horarios", {
-					method: "GET",
-					headers: {
-						"Content-Type": "application/json"
-					},
-					body: "{}"
-				})
-					.then(respuesta => respuesta.json())
-					.then(data => {
-						setStore({
-							horarios: data.results
+							profile: data
 						});
 					})
 					.catch(error => console.log(error));
@@ -105,5 +89,4 @@ const getState = ({ getStore, getActions, setStore }) => {
 		}
 	};
 };
-
 export default getState;
