@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "../../styles/registro.scss";
 import PropTypes from "prop-types";
 
 export const Registro = props => {
+	const history = useHistory();
 	const [state, setState] = useState({
 		username: null,
 		apellido: null,
@@ -28,6 +30,7 @@ export const Registro = props => {
 			body: JSON.stringify(form),
 			headers: { "content-type": "application/json" }
 		}).then(resp => resp.json());
+		history.push("/Login");
 	};
 
 	return (
