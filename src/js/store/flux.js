@@ -11,9 +11,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 			isAuth: false,
 			currentUser: null,
 			id: "",
-			profile: null
+			profile: null,
+			extras: []
 		},
 		actions: {
+			getextras: () => {
+				fetch("http://localhost:5000/API/Extras")
+					.then(respuesta => respuesta.json())
+					.then(data => {
+						setStore({
+							extras: data.results
+						});
+					})
+					.catch(error => console.log(error));
+			},
 			isAuthenticated: () => {
 				console.log("verificando usuario");
 				if (sessionStorage.getItem("isAuth")) {
