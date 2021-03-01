@@ -138,25 +138,25 @@ export const Servicios = props => {
 							<Dates onChange={(handleChange, date => setStartDate(date))} />
 						</div>
 						<div className="col-6">
-							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+							<a id="hr" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
 								11:00 <i className="far fa-clock" />
 							</a>
-							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+							<a id="hr" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
 								13:00 <i className="far fa-clock" />
 							</a>
-							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+							<a id="hr" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
 								14:00 <i className="far fa-clock" />
 							</a>
-							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+							<a id="hr" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
 								15:00 <i className="far fa-clock" />
 							</a>
-							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+							<a id="hr" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
 								16:00 <i className="far fa-clock" />
 							</a>
-							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+							<a id="hr" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
 								17:00 <i className="far fa-clock" />
 							</a>
-							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+							<a id="hr" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
 								18:00 <i className="far fa-clock" />
 							</a>
 						</div>
