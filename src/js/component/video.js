@@ -17,7 +17,9 @@ export const Video = () => (
 				<spam id="pitem">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis deserunt, animi sit nam nobis,
 					doloribus laboriosam quaerat possimus repellat sint facere consectetur at dolore doloremque. Eos
-					dolor explicabo labore suscipit.
+					dolor explicabo labore suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+					deserunt, animi sit nam nobis, doloribus laboriosam quaerat possimus repellat sint facere
+					consectetur at dolore doloremque. Eos dolor explicabo labore suscipit.
 				</spam>
 			</div>
 		</div>

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import contactoImg from "../../img/bg-registro-2.jpg";
 import "../../styles/index.scss";
+import Faq1 from "../component/collapsibles/Faq1";
+import Faq2 from "../component/collapsibles/Faq2";
+import Faq3 from "../component/collapsibles/Faq3";
 
 export const Contacto = () => (
 	<div className="contenedor-principal">
@@ -27,22 +30,15 @@ export const Contacto = () => (
 							<div className="card-header header-soporte" id="headingOne">
 								<h5 className="mb-0">
 									<button
-										className="btn btn-link faq"
+										id="headingOne"
+										className="btn btn-link faq1"
 										data-toggle="collapse"
 										data-target="#collapseOne"
 										aria-expanded="true"
 										aria-controls="collapseOne">
-										F.A.Q #1 <i className="fas fa-angle-down rotate-icon" />
+										<Faq1 />
 									</button>
 								</h5>
-							</div>
-
-							<div
-								id="collapseOne"
-								className="collapse show"
-								aria-labelledby="headingOne"
-								data-parent="#accordion">
-								<div className="card-body">Anim pariatur cliche reprehenderit.</div>
 							</div>
 						</div>
 						<div className="card faq-card">
@@ -54,16 +50,9 @@ export const Contacto = () => (
 										data-target="#collapseTwo"
 										aria-expanded="false"
 										aria-controls="collapseTwo">
-										F.A.Q #2 <i className="fas fa-angle-down rotate-icon" />
+										<Faq2 />
 									</button>
 								</h5>
-							</div>
-							<div
-								id="collapseTwo"
-								className="collapse"
-								aria-labelledby="headingTwo"
-								data-parent="#accordion">
-								<div className="card-body">Anim pariatur cliche reprehenderit.</div>
 							</div>
 						</div>
 						<div className="card faq-card">
@@ -75,16 +64,9 @@ export const Contacto = () => (
 										data-target="#collapseThree"
 										aria-expanded="false"
 										aria-controls="collapseThree">
-										F.A.Q #3 <i className="fas fa-angle-down rotate-icon" />
+										<Faq3 />
 									</button>
 								</h5>
-							</div>
-							<div
-								id="collapseThree"
-								className="collapse"
-								aria-labelledby="headingThree"
-								data-parent="#accordion">
-								<div className="card-body">Anim pariatur cliche reprehenderit.</div>
 							</div>
 						</div>
 					</div>
