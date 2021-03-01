@@ -33,7 +33,7 @@ export const Checkout = props => {
 						</thead>
 						<tbody>
 							<tr>
-								<th>Test User</th>
+								<th>Testuser2</th>
 								<td>Servicio Estándar</td>
 								<td>Detergente premium</td>
 								<td>12-05-2021</td>
