@@ -5,7 +5,6 @@ import servicioImg3 from "../../img/premium.jpg";
 import "../../styles/index.scss";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link } from "react-router-dom";
-import { Extras } from "../component/extras";
 import Basico from "../component/collapsibles/Basico";
 import Pro from "../component/collapsibles/Pro";
 import Premium from "../component/collapsibles/Premium";
@@ -36,11 +35,12 @@ export const Servicios = props => {
 	};
 
 	const saveServices = () => {
-		fetch("http://localhost:5000/API/Profile/<int:id>/Checkout/<int:id>", {
+		fetch("http://localhost:5000/API/Checkout", {
 			method: "POST",
-			body: JSON.stringify(),
+			body: JSON.stringify(form),
 			headers: { "content-type": "application/json" }
 		}).then(resp => resp.json());
+		history.push("/Checkout");
 	};
 	return (
 		<div className="contenedor-principal">
@@ -77,7 +77,58 @@ export const Servicios = props => {
 						</div>
 					</div>
 					<hr />
-					<Extras />
+					<h2 className="titulos-interiores">Selecciona servicios adicionales</h2>
+					<p className="parrafo-intro">Selecciona los servicios adicionales que deseas agregar</p>
+					<div className="form-check">
+						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+							Detergente premium
+						</label>
+						<label className="precio-extra" onChange={handleChange}>
+							$5.000
+						</label>
+					</div>
+					<hr />
+					<div className="form-check">
+						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+							Silicona premium
+						</label>
+						<label className="precio-extra" onChange={handleChange}>
+							$5.000
+						</label>
+					</div>
+					<hr />
+					<div className="form-check">
+						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+							Lavado motor
+						</label>
+						<label className="precio-extra" onChange={handleChange}>
+							$10.000
+						</label>
+					</div>
+					<hr />
+					<div className="form-check">
+						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+							Limpiador llantas
+						</label>
+						<label className="precio-extra" onChange={handleChange}>
+							$6.000
+						</label>
+					</div>
+					<hr />
+					<div className="form-check">
+						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+							Cera aerosol
+						</label>
+						<label className="precio-extra" onChange={handleChange}>
+							$4.000
+						</label>
+					</div>
+					<hr />
 					<hr />
 					<h2 className="titulos-interiores">Selecciona fecha y hora</h2>
 					<p className="parrafo-intro">Selecciona el día y la hora que lavaremos tu vehiculo</p>
@@ -88,16 +139,25 @@ export const Servicios = props => {
 						</div>
 						<div className="col-6">
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-								{store.horarios[params.id]} <i className="far fa-clock" />
+								11:00 <i className="far fa-clock" />
 							</a>
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-								{store.horarios[params.id]} <i className="far fa-clock" />
+								13:00 <i className="far fa-clock" />
 							</a>
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-								{store.horarios[params.id]} <i className="far fa-clock" />
+								14:00 <i className="far fa-clock" />
 							</a>
 							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-								{store.horarios[params.id]} <i className="far fa-clock" />
+								15:00 <i className="far fa-clock" />
+							</a>
+							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+								16:00 <i className="far fa-clock" />
+							</a>
+							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+								17:00 <i className="far fa-clock" />
+							</a>
+							<a href="#" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+								18:00 <i className="far fa-clock" />
 							</a>
 						</div>
 					</div>
@@ -114,38 +174,6 @@ export const Servicios = props => {
 		</div>
 	);
 };
-
-function ExtraServicios() {
-	const { store, actions } = useContext(Context);
-
-	useEffect(() => {
-		actions.getextras();
-	}, []);
-	return (
-		<>
-			{store.characters.map((elemento, index) => {
-				return (
-					<div key={index} className="contenedor-principal">
-						<div className="container">
-							<div className="main-servicios">
-								<hr />
-								<h2 className="titulos-interiores">Selecciona servicios adicionales</h2>
-								<p className="parrafo-intro">Selecciona los servicios adicionales que deseas agregar</p>
-								<div className="form-check">
-									<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-									<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
-										{elemento.nombre_extra}
-									</label>
-								</div>
-								<hr />
-							</div>
-						</div>
-					</div>
-				);
-			})}
-		</>
-	);
-}
 
 Servicios.propTypes = {
 	match: PropTypes.object
