@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import "../../styles/agenda_cards.scss";
-import domiImg from "../../img/domi.jpg";
-import starImg from "../../img/star.jpg";
-import cwImg from "../../img/car-wash.jpg";
+import "../../../styles/agenda_cards.scss";
+import domiImg from "../../../img/domi.jpg";
+import starImg from "../../../img/star.jpg";
+import cwImg from "../../../img/car-wash.jpg";
 
 export const Agenda = () => (
 	<div className="container-fluid">

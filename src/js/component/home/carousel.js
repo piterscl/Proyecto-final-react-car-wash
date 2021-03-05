@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "../../styles/index.scss";
+import React from "react";
+import "../../../styles/index.scss";
 
 export const Carousel = () => (
 	<div className="carousel">

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "../../styles/video.scss";
+import React from "react";
+import "../../../styles/video.scss";
 
 export const Video = () => (
 	<div className="container-fluid">

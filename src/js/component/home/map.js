@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../styles/map.scss";
+import "../../../styles/map.scss";
 
 export const Map = () => (
 	<div className="container-fluid">

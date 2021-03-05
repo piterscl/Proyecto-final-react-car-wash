@@ -1,10 +1,10 @@
 import React from "react";
-import { Map } from "../component/map";
-import { Parallax } from "../component/parallax";
-import { Video } from "../component/video";
-import { Agenda } from "../component/agenda";
-import { Carousel } from "../component/carousel";
-import injectContext from "../store/appContext";
+import { Map } from "../component/home/map";
+import { Parallax } from "../component/home/parallax";
+import { Video } from "../component/home/video";
+import { Agenda } from "../component/home/agenda";
+import { Carousel } from "../component/home/carousel";
+import { ToTop } from "../component/home/scrolltop";
 import "../../styles/home.scss";
 
 export const Home = () => (
@@ -14,5 +14,6 @@ export const Home = () => (
 		<Parallax />
 		<Agenda />
 		<Map />
+		<ToTop />
 	</div>
 );
