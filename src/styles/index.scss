@@ -10,23 +10,8 @@
   color: white;
 }
 
-.main-servicios{
-  background-color:white;
-  max-width: 1200px;
-  margin:0px auto;
-  padding: 15px;
-}
 
-.precio-extra {
-  font-weight: bolder;
-  font-size: 1.1rem;
-  float: right;
-  padding-right: 10px;
-}
 
-.form-check {
-  line-height: 1.5rem;
-}
 
 .contact-number{
   font-size: 1.6rem;
@@ -63,6 +48,7 @@
 .agenda {
     padding-bottom: 15px;
 }
+
 .btn-primary {
     font-family: 'Open Sans';
     font-style: normal;
@@ -81,4 +67,8 @@
 
 .checkout{
   color: white !important;
+}
+
+#black-font{
+  color: black;
 }

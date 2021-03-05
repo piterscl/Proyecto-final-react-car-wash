@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import servicioImg1 from "../../img/estandar.jpg";
 import servicioImg2 from "../../img/pro.jpg";
 import servicioImg3 from "../../img/premium.jpg";
-import "../../styles/index.scss";
+import "../../styles/servicios.scss";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link } from "react-router-dom";
 import Basico from "../component/collapsibles/Basico";
@@ -46,7 +46,9 @@ export const Servicios = props => {
 		<div className="contenedor-principal">
 			<div className="container">
 				<div className="main-servicios">
-					<h2 className="titulos-interiores">Selecciona tu servicio</h2>
+					<h2 id="black-font" className="titulos-interiores">
+						Selecciona tu servicio
+					</h2>
 					<p className="parrafo-intro">Elige el tipo de servicio que deseas para tu auto.</p>
 					<div className="card-deck">
 						<div className="card">
@@ -75,54 +77,76 @@ export const Servicios = props => {
 						</div>
 					</div>
 					<hr />
-					<h2 className="titulos-interiores">Selecciona servicios adicionales</h2>
+					<h2 id="black-font" className="titulos-interiores">
+						Selecciona servicios adicionales
+					</h2>
 					<p className="parrafo-intro">Selecciona los servicios adicionales que deseas agregar</p>
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+						<label
+							id="black-font"
+							className="form-check-label"
+							htmlFor="defaultCheck1"
+							onChange={handleChange}>
 							Detergente premium
 						</label>
-						<label className="precio-extra" onChange={handleChange}>
+						<label id="black-font" className="precio-extra" onChange={handleChange}>
 							$5.000
 						</label>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+						<label
+							id="black-font"
+							className="form-check-label"
+							htmlFor="defaultCheck1"
+							onChange={handleChange}>
 							Silicona premium
 						</label>
-						<label className="precio-extra" onChange={handleChange}>
+						<label id="black-font" className="precio-extra" onChange={handleChange}>
 							$5.000
 						</label>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+						<label
+							id="black-font"
+							className="form-check-label"
+							htmlFor="defaultCheck1"
+							onChange={handleChange}>
 							Lavado motor
 						</label>
-						<label className="precio-extra" onChange={handleChange}>
+						<label id="black-font" className="precio-extra" onChange={handleChange}>
 							$10.000
 						</label>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+						<label
+							id="black-font"
+							className="form-check-label"
+							htmlFor="defaultCheck1"
+							onChange={handleChange}>
 							Limpiador llantas
 						</label>
-						<label className="precio-extra" onChange={handleChange}>
+						<label id="black-font" className="precio-extra" onChange={handleChange}>
 							$6.000
 						</label>
 					</div>
 					<hr />
 					<div className="form-check">
 						<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-						<label className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+						<label
+							id="black-font"
+							className="form-check-label"
+							htmlFor="defaultCheck1"
+							onChange={handleChange}>
 							Cera aerosol
 						</label>
-						<label className="precio-extra" onChange={handleChange}>
+						<label id="black-font" className="precio-extra" onChange={handleChange}>
 							$4.000
 						</label>
 					</div>
