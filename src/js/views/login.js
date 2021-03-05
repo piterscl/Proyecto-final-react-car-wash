@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
-import "../../styles/index.scss";
 import PropTypes from "prop-types";
 
 export const Login = props => {
@@ -26,7 +25,7 @@ export const Login = props => {
 						<div className="col mr-auto columna-form">
 							<h3 className="titulos-interiores">Ingresar</h3>
 							<div className="parrafo-intro">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+								Coloca tu nombre de usuario y tu contraseña para ingresar a tu perfil
 							</div>
 							<form onSubmit={e => handleSubmit(e, history)} method="post">
 								<div className="form-group">
@@ -45,12 +44,12 @@ export const Login = props => {
 										name="password"
 										className="form-control"
 										id="exampleInputPassword"
-										placeholder="Password"
+										placeholder="Contraseña"
 										value={password}
 										onChange={handleChange}
 									/>
 								</div>
-								<button type="submit" className="btn btn-gold">
+								<button type="submit" className="btn btn-dark">
 									Ingresar
 								</button>
 							</form>

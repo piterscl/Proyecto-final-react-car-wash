@@ -10,14 +10,8 @@
     padding: 15px;
   }
 
-  .main-servicios{
-    background-color:white;
-    max-width: 1200px;
-    margin:0px auto;
-    padding: 15px;
-  }
+    // Tamaño de el precio extra de los servicios
 
-  
 .precio-extra {
     font-weight: bolder;
     font-size: 1.1rem;
@@ -25,12 +19,31 @@
     padding-right: 10px;
   }
 
-  .form-check {
-    line-height: 1.5rem;
-  }
+  // Tamaño de los intro de cada sección
 
   .parrafo-intro{
       font-weight: 1000;
       font-size: 1rem;
   }
   
+  // Hover, y color agregado a los bonotes de agendamiento 
+
+  #hr{
+    margin: 0.2rem;
+  }
+
+  #hr:hover{background-color: #bd0505}
+
+  #hr:active{
+    background-color: #cfd5c4;
+  box-shadow: 0 5px rgb(33, 16, 107);
+  transform: translateY(4px);
+  }
+
+  // Tamaño del icono de calendario hecho
+
+  #calendar {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+  }

@@ -41,7 +41,7 @@ export const Registro = props => {
 					<div className="col mr-auto columna-form">
 						<h3 className="titulos-interiores">Registrarse</h3>
 						<div className="parrafo-intro">
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+							Coloca tus datos para añadirte entre nuestra destacada clientela.
 						</div>
 						<form onSubmit={handleSubmit}>
 							<div className="form-group">
@@ -95,7 +95,7 @@ export const Registro = props => {
 									onChange={handleChange}
 								/>
 							</div>
-							<button type="submit" className="btn btn-gold">
+							<button type="submit" className="btn btn-dark">
 								Registrarme
 							</button>
 						</form>

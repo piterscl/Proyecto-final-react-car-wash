@@ -156,7 +156,7 @@ export const Servicios = props => {
 					<p className="parrafo-intro">Selecciona el día y la hora que lavaremos tu vehiculo</p>
 					<div className="row agenda">
 						<div className="col-6">
-							<i className="fas fa-calendar-alt" />
+							<i id="calendar" className="fas fa-calendar-alt" />
 							<Dates onChange={(handleChange, date => setStartDate(date))} />
 						</div>
 						<div className="col-6">
@@ -183,7 +183,7 @@ export const Servicios = props => {
 							</a>
 						</div>
 					</div>
-					<button id="checkout" type="submit" className="btn btn-gold" onSubmit={handleSubmit}>
+					<button id="checkout" type="submit" className="btn btn-dark" onSubmit={handleSubmit}>
 						<Link to="/checkout">
 							<a className="checkout">
 								Agendar
