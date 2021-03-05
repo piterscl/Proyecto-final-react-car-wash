@@ -11,14 +11,10 @@ export const Contacto = () => (
 			<div className="row modal-servicio">
 				<div className="col-6">
 					<h2 className="titulos-interiores">¿Necesitas ayuda?</h2>
-					<p className="parrafo-intro">
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					</p>
+					<p className="parrafo-intro">Haz click y busca tu duda!</p>
 					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-						the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of
-						type and scrambled it to make a type specimen book. It has survived not only five centuries, but
-						also the leap into electronic typesetting, remaining essentially unchanged.
+						Hacemos todo lo posible para hacer la aplicación lo más user-friendly posible, en esta sección
+						encontrarás las dudas frecuentes de nuestros usuarios,
 					</p>
 					<div className="contact-number">
 						<i className="fab fa-whatsapp" /> +569 5555 55 55

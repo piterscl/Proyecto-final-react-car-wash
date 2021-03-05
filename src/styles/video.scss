@@ -2,16 +2,23 @@
     background-color: black;
 }
 
-
-#pitem {
-    width: 100px;
-    margin-top: 200px;
-    font-size: 22px;
-    font-family: 'Open Sans', sans-serif;
-    color: white;
-}
-
 .yt{
     width:48vw;
 	height:48vh;
+}
+
+div h2 {
+    color: white;
+    padding-bottom: 1vw;
+    margin-left: 1vw;
+}
+
+.form-check-label {
+    color: white;
+    padding-bottom: 1vw;
+    font-weight: 500;
+}
+
+.precio-extra{
+    color: white;
 }

@@ -9,9 +9,11 @@ export const Footer = () => (
 				<div className="col-sm-12 col-md-9">
 					<h6>Black Star Car Wash</h6>
 					<p className="text-justify">
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-						the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of
-						type and scrambled it to make a type specimen book.
+						El autolavado de tu preferencia, agenda tú hora{" "}
+						<Link to="/Servicios">
+							<a>aquí</a>
+						</Link>
+						.
 					</p>
 				</div>
 				<div className="col-xs-6 col-md-3">

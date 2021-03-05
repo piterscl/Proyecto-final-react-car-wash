@@ -47,9 +47,7 @@ export const Servicios = props => {
 			<div className="container">
 				<div className="main-servicios">
 					<h2 className="titulos-interiores">Selecciona tu servicio</h2>
-					<p className="parrafo-intro">
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					</p>
+					<p className="parrafo-intro">Elige el tipo de servicio que deseas para tu auto.</p>
 					<div className="card-deck">
 						<div className="card">
 							<img className="card-img-top" src={servicioImg1} alt="Card image cap" />

@@ -14,13 +14,41 @@ export const Video = () => (
 				/>
 			</div>
 			<div className="col-sm-6">
-				<spam id="pitem">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis deserunt, animi sit nam nobis,
-					doloribus laboriosam quaerat possimus repellat sint facere consectetur at dolore doloremque. Eos
-					dolor explicabo labore suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-					deserunt, animi sit nam nobis, doloribus laboriosam quaerat possimus repellat sint facere
-					consectetur at dolore doloremque. Eos dolor explicabo labore suscipit.
-				</spam>
+				<h2>Servicios Extras</h2>
+				<div className="form-check">
+					<label className="form-check-label" htmlFor="defaultCheck1">
+						Detergente premium
+					</label>
+					<span className="precio-extra">$5.000</span>
+				</div>
+				<hr />
+				<div className="form-check">
+					<label className="form-check-label" htmlFor="defaultCheck1">
+						Silicona premium
+					</label>
+					<span className="precio-extra">$5.000</span>
+				</div>
+				<hr />
+				<div className="form-check">
+					<label className="form-check-label" htmlFor="defaultCheck1">
+						Lavado motor
+					</label>
+					<span className="precio-extra">$10.000</span>
+				</div>
+				<hr />
+				<div className="form-check">
+					<label className="form-check-label" htmlFor="defaultCheck1">
+						Limpiador llantas
+					</label>
+					<span className="precio-extra">$6.000</span>
+				</div>
+				<hr />
+				<div className="form-check">
+					<label className="form-check-label" htmlFor="defaultCheck1">
+						Cera aerosol
+					</label>
+					<span className="precio-extra">$4.000</span>
+				</div>
 			</div>
 		</div>
 	</div>
