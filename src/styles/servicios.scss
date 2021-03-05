@@ -1,7 +1,5 @@
 
-#black-font{
-    color: black;
-  }
+
 
   .main-servicios{
     background-color:white;
@@ -10,13 +8,17 @@
     padding: 15px;
   }
 
-    // Tamaño de el precio extra de los servicios
+    // Tamaño de el precio y color de los servicios extra
 
 .precio-extra {
     font-weight: bolder;
     font-size: 1.1rem;
     float: right;
     padding-right: 10px;
+  }
+
+#black-font{
+    color: black;
   }
 
   // Tamaño de los intro de cada sección
@@ -46,4 +48,12 @@
     font-size: 1.5rem;
     margin-right: 1rem;
     margin-top: 0.2rem;
+  }
+
+  //Margen del segundo titulo
+
+  #marg {
+    margin-top: 1rem;
+    color: black;
+    font-weight: 700;
   }
