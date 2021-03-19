@@ -6,10 +6,12 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Button, Modal } from "react-bootstrap";
+import PayPal from "../component/paypal/paypal";
+import { PayPalButton } from "react-paypal-button-v2";
 /* import { Modalbtn } from "../component/modalbtn"; */
 /* import { Modal } from "bootstrap"; */
 
-export const Checkout = props => {
+export const Checkout = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	const [show, setShow] = useState(false);
@@ -49,7 +51,9 @@ export const Checkout = props => {
 						<Modal.Header closeButton>
 							<Modal.Title>Proceso finalizado</Modal.Title>
 						</Modal.Header>
-						<Modal.Body>Tu servicio ha sido agendado con éxito</Modal.Body>
+						<Modal.Body>
+							<PayPalButton />
+						</Modal.Body>
 						<Modal.Footer>
 							<Link to="/">
 								<Button variant="secondary" onClick={handleClose}>

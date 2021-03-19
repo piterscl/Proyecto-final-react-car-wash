@@ -1,9 +1,10 @@
 import React from "react";
 import Collapsible from "react-collapsible";
+import "../../../styles/servicios.scss";
 
 const Pro = () => {
 	return (
-		<Collapsible trigger="Servicio Pro">
+		<Collapsible className="colla" trigger="Servicio Pro">
 			<p>- Lavado de carrocería.</p>
 			<p>- Limpieza de vidrios exterior.</p>
 			<p>- Limpieza de plásticos y molduras exteriores.</p>
