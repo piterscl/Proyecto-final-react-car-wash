@@ -12,3 +12,13 @@
     background-repeat: no-repeat;
     
   }
+
+  @media only screen and (max-device-width: 1366px) {
+    #upper-paralax {
+   display: none;
+   }
+}
+
+#upper-paralax {
+   background-color: black;
+   }

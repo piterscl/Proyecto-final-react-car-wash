@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logoImg from "../../img/logo-1.png";
-import "../../styles/index.scss";
+import "../../styles/navbar.scss";
 
 export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div className="container">
 				<p className="navbar-brand" href="#">
-					<img src={logoImg} width="140vw" height="60vh" alt="" />
+					<img id="nav-brand" src={logoImg} alt="brand" />
 				</p>
 
 				<div className="collapse navbar-collapse" id="navbarNav">

@@ -1,5 +1,11 @@
 .mapid {
-    width: 97.1vw;
-    height: 20vw;
+    width: 97.8vw;
+    height: 40vh;
     border: 0px;
     }
+
+    @media only screen and (max-device-width: 900px) {
+    .mapid {
+
+    }
+}

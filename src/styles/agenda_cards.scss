@@ -14,6 +14,7 @@
 }
 
 .agenda a:hover {
+  cursor: pointer;
   color: gray;
 }
 
@@ -32,6 +33,7 @@ span {
 
 #hyper:hover {
   color: gray;
+  cursor: pointer;
 }
 
 #hyper {
@@ -53,4 +55,24 @@ span {
 #img-card {
   width: 14.9vw;
   height: 28vh;
+}
+
+@media only screen and (max-device-width: 900px) {
+  #img-card {
+    width: 15rem;
+    
+  }
+}
+
+@media only screen and (max-device-width: 900px) {
+  #hyper {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-device-width: 900px) {
+  .card-body {
+    width: 15rem;
+    background-color: rgb(37, 36, 36);
+  }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../styles/index.scss";
+import "../../../styles/carousel.scss";
 
 export const Carousel = () => (
 	<div className="carousel">
@@ -12,6 +12,7 @@ export const Carousel = () => (
 		<div className="carousel-inner">
 			<div className="carousel-item active">
 				<img
+					id="tenno"
 					src="https://gretaproject.com/projects/23_black-star-car-wash/05.jpg"
 					className="d-block w-100"
 					alt="..."
@@ -19,6 +20,7 @@ export const Carousel = () => (
 			</div>
 			<div className="carousel-item">
 				<img
+					id="tenno"
 					src="https://gretaproject.com/projects/23_black-star-car-wash/05.jpg"
 					className="d-block w-100"
 					alt="..."
@@ -26,18 +28,14 @@ export const Carousel = () => (
 			</div>
 			<div className="carousel-item">
 				<img
+					id="tenno"
 					src="https://gretaproject.com/projects/23_black-star-car-wash/05.jpg"
 					className="d-block w-100"
 					alt="..."
 				/>
 			</div>
 		</div>
-		<a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-			<span className={("agenda", "visually - hidden")}>Previous</span>
-		</a>
-		<a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-			<span className={("agenda", "carousel - control - prev - icon")} aria-hidden="true" />
-			<span className={("agenda", "visually - hidden")}>Next</span>
-		</a>
+		<a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev"></a>
+		<a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next"></a>
 	</div>
 );
