@@ -55,6 +55,11 @@ span {
 #img-card {
   width: 14.9vw;
   height: 28vh;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.card-body{
+  box-shadow: rgba(27, 27, 27, 0.3) 0px 19px 38px, rgba(85, 84, 84, 0.22) 0px 15px 12px;
 }
 
 @media only screen and (max-device-width: 1440px) {

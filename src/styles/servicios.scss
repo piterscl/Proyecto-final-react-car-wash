@@ -1,5 +1,7 @@
 
-
+#cardib{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
 
   .main-servicios{
     background-color:white;
@@ -21,6 +23,9 @@
     color: black;
   }
 
+  #black-font:hover{
+    cursor: pointer;
+  }
   // Tamaño de los intro de cada sección
 
   .parrafo-intro{
@@ -34,12 +39,9 @@
     margin: 0.2rem;
   }
 
-  #hr:hover{background-color: #bd0505}
-
   #hr:active{
     background-color: #cfd5c4;
-  box-shadow: 0 5px rgb(33, 16, 107);
-  transform: translateY(4px);
+    box-shadow: rgba(2, 2, 2, 0.4) -5px 5px, rgba(3, 3, 3, 0.3) -10px 10px, rgba(8, 8, 8, 0.2) -15px 15px, rgba(8, 8, 8, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
   }
 
   // Tamaño del icono de calendario hecho
@@ -62,9 +64,36 @@
 
   .card-img-top:hover{
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   }
 
   .colla:hover {
     cursor: pointer;
+    box-shadow: rgba(250, 250, 250, 0.007) 0px 14px 28px, rgba(201, 195, 195, 0.021) 0px 10px 10px;
 
+  }
+
+//button style 
+
+#checkout {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+  @media only screen and (max-device-width: 1200px){
+    #cardib {
+      width: 16.1rem;
+    }
+  }
+
+  @media only screen and (max-device-width: 1024px){
+    #cardib {
+      width: 15.1rem;
+    }
+  }
+
+  @media only screen and (max-device-width: 768px){
+    #cardib {
+      width: 9.901rem;
+    }
   }

@@ -1,6 +1,7 @@
 import React from "react";
 import Dates from "../../component/datepicker/datepicker";
 import { Link } from "react-router-dom";
+import "../../../styles/servicios.scss";
 
 const handleChange = e => {
 	let datos = state;

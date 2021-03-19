@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../styles/servicios.scss";
 
 const handleChange = e => {
 	let datos = state;
@@ -25,7 +26,7 @@ export const ServExtra = () => {
 			<hr />
 			<div className="form-check">
 				<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-				<label id="black-font" className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+				<label id="black-font" className="form-check-label" htmlFor="defaultCheck2" onChange={handleChange}>
 					Silicona premium
 				</label>
 				<label id="black-font" className="precio-extra" onChange={handleChange}>
@@ -35,7 +36,7 @@ export const ServExtra = () => {
 			<hr />
 			<div className="form-check">
 				<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-				<label id="black-font" className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+				<label id="black-font" className="form-check-label" htmlFor="defaultCheck3" onChange={handleChange}>
 					Lavado motor
 				</label>
 				<label id="black-font" className="precio-extra" onChange={handleChange}>
@@ -45,7 +46,7 @@ export const ServExtra = () => {
 			<hr />
 			<div className="form-check">
 				<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-				<label id="black-font" className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+				<label id="black-font" className="form-check-label" htmlFor="defaultCheck4" onChange={handleChange}>
 					Limpiador llantas
 				</label>
 				<label id="black-font" className="precio-extra" onChange={handleChange}>
@@ -55,7 +56,7 @@ export const ServExtra = () => {
 			<hr />
 			<div className="form-check">
 				<input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-				<label id="black-font" className="form-check-label" htmlFor="defaultCheck1" onChange={handleChange}>
+				<label id="black-font" className="form-check-label" htmlFor="defaultCheck5" onChange={handleChange}>
 					Cera aerosol
 				</label>
 				<label id="black-font" className="precio-extra" onChange={handleChange}>
