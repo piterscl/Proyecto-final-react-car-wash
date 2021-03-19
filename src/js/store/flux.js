@@ -23,10 +23,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 							extras: data.results
 						});
 					})
-					.catch(error => console.log(error));
+					.catch(error => undefined);
 			},
 			isAuthenticated: () => {
-				console.log("verificando usuario");
 				if (sessionStorage.getItem("isAuth")) {
 					setStore({
 						isAuth: JSON.parse(sessionStorage.getItem("isAuth")),
@@ -90,12 +89,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 					.then(resp => resp.json())
 					.then(data => {
-						console.log(data);
 						setStore({
 							profile: data
 						});
 					})
-					.catch(error => console.log(error));
+					.catch(error => undefined);
 			}
 		}
 	};

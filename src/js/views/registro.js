@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../../styles/registro.scss";
 import PropTypes from "prop-types";
+import emailjs from "emailjs-com";
 
 export const Registro = props => {
 	const history = useHistory();
@@ -33,6 +34,19 @@ export const Registro = props => {
 		history.push("/Login");
 	};
 
+	function sendEmail(e) {
+		e.preventDefault();
+
+		emailjs.sendForm("service_5w696gq", "template_mzqtd1b", e.target, "user_HvOa5jblEcSiI8apMiXc1").then(
+			result => {
+				console.log(result.text);
+			},
+			error => {
+				console.log(error.text);
+			}
+		);
+	}
+
 	return (
 		<div className="contenedor-principal">
 			<div className="container">
@@ -43,7 +57,7 @@ export const Registro = props => {
 						<div className="parrafo-intro">
 							Coloca tus datos para añadirte entre nuestra destacada clientela.
 						</div>
-						<form onSubmit={handleSubmit}>
+						<form className="contact-form" onSubmit={handleSubmit & sendEmail}>
 							<div className="form-group">
 								<input
 									type="text"
@@ -67,7 +81,7 @@ export const Registro = props => {
 							</div>
 							<div className="form-group">
 								<input
-									type="text"
+									type="password"
 									className="form-control"
 									id="password"
 									placeholder="Contraseña..."
@@ -95,7 +109,7 @@ export const Registro = props => {
 									onChange={handleChange}
 								/>
 							</div>
-							<button type="submit" className="btn btn-dark">
+							<button type="submit" value="Send" className="btn btn-dark">
 								Registrarme
 							</button>
 						</form>
