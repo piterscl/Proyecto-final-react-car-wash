@@ -6,12 +6,12 @@ import "../../styles/navbar.scss";
 export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div className="container">
+			<div id="navcon" className="container">
 				<p className="navbar-brand" href="#">
 					<img id="nav-brand" src={logoImg} alt="brand" />
 				</p>
 
-				<div className="collapse navbar-collapse" id="navbarNav">
+				<div className="" id="navbarNav">
 					<ul className="navbar-nav ml-auto">
 						<li className="nav-item">
 							<Link to="/">

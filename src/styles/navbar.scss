@@ -1,6 +1,4 @@
 .nav-item li {
-    font-family: 'Open Sans';
-    font-style: normal;
     margin: auto;
     width: max-content;
     color: white;
@@ -17,4 +15,23 @@
 
   .navbar {
       padding-bottom: none;
+  }
+
+  @media (max-width: 992px) {
+      .nav-link {
+          font-size: 1rem;
+      }
+  }
+
+  @media (max-width: 992px) {
+      #nav-brand {
+          width: 6rem;
+          height: 3rem;
+      }
+  }
+
+  @media (max-width: 860px) {
+      #navcon {
+            height: 20rem;
+      }
   }
