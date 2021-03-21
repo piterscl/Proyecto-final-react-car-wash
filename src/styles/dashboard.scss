@@ -1,0 +1,55 @@
+.nav-item li {
+    margin: auto;
+    width: max-content;
+    color: white;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+  }
+  
+  #nav-brand {
+      width: 9rem;
+      height: 3rem;
+  }
+
+  .navbar {
+      padding-bottom: none;
+  }
+
+  @media (max-width: 992px) {
+      .nav-link {
+          font-size: 1rem;
+      }
+  }
+
+  @media (max-width: 992px) {
+      #nav-brand {
+          width: 6rem;
+          height: 3rem;
+      }
+  }
+
+  @media (max-width: 860px) {
+      #navcon {
+            height: 20rem;
+      }
+  }
+
+
+  .sidebar-1 {
+      background-color: black !important;
+  }
+
+  .col-main {
+      background-color: white;
+  }
+
+  .titlesadmins {
+      color: black;
+  }
+
+  .active {
+    color: #ad9d91;
+    font-weight: 700;
+}
