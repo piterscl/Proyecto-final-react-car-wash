@@ -5,7 +5,7 @@ import "../../styles/navbar.scss";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav id="mainnavbar" className="navbar navbar-expand-lg navbar-dark bg-dark principalnav">
 			<div id="navcon" className="container">
 				<p className="navbar-brand" href="#">
 					<img id="nav-brand" src={logoImg} alt="brand" />
@@ -30,7 +30,7 @@ export const Navbar = () => {
 								<p className="nav-link">Contacto y Soporte</p>
 							</Link>
 						</li>
-						<li className="nav-item active">
+						<li className="nav-item">
 							<Link to="/Registro">
 								<p className="nav-link">
 									Registro
@@ -38,7 +38,7 @@ export const Navbar = () => {
 								</p>
 							</Link>
 						</li>
-						<li className="nav-item active">
+						<li className="nav-item">
 							<Link to="/Login">
 								<p className="nav-link">
 									Log in <span className="sr-only">(current)</span>
