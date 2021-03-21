@@ -13,6 +13,9 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Checkout } from "./views/Checkout";
+import { AdminLogin } from "./views/login-admin";
+import { AdminDashboard } from "./views/admin-dashboard";
+import { AdminUsers } from "./views/admin-users";
 
 //create your first component
 const Layout = () => {
@@ -24,35 +27,57 @@ const Layout = () => {
 		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
 					<Switch>
 						<Route exact path="/">
+							<Navbar />
 							<Home />
+							<Footer />
 						</Route>
 						<Route exact path="/Registro">
+							<Navbar />
 							<Registro />
+							<Footer />
 						</Route>
 						<Route exact path="/Contacto-soporte">
+							<Navbar />
 							<Contacto />
+							<Footer />
 						</Route>
 						<Route exact path="/Servicios">
+							<Navbar />
 							<Servicios />
+							<Footer />
 						</Route>
 						<Route exact path="/Login">
+							<Navbar />
 							<Login />
+							<Footer />
 						</Route>
 						<Route exact path="/Profile">
+							<Navbar />
 							<Profile />
+							<Footer />
 						</Route>
 						<Route exact path="/Checkout">
+							<Navbar />
 							<Checkout />
+							<Footer />
 						</Route>
-
+						<Route exact path="/admin-login">
+							<AdminLogin />
+						</Route>
+						<Route exact path="/admin-dashboard/resumen">
+							<AdminDashboard />
+						</Route>
+						<Route exact path="/admin-dashboard/usuarios">
+							<AdminUsers />
+						</Route>
 						<Route>
+							<Navbar />
 							<h1>Not found!</h1>
+							<Footer />
 						</Route>
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
