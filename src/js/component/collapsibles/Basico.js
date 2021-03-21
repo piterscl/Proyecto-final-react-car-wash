@@ -4,7 +4,7 @@ import "../../../styles/servicios.scss";
 
 export const Basico = () => {
 	return (
-		<Collapsible className="colla" trigger="Servicio Basico">
+		<Collapsible className="colla" trigger="Servicio Básico">
 			<p>- Lavado de carrocería manual.</p>
 			<p>- Limpieza de vidrios y espejos exterior.</p>
 			<p>- Limpieza de plásticos exteriores.</p>
