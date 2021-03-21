@@ -36,9 +36,9 @@ export const Checkout = () => {
 						<tbody>
 							<tr>
 								<th>Testuser2</th>
-								<td>Servicio Estándar</td>
+								<td>Servicio básico</td>
 								<td>Detergente premium</td>
-								<td>12-05-2021</td>
+								<td>06-05-2021</td>
 								<td>11:00</td>
 							</tr>
 						</tbody>
